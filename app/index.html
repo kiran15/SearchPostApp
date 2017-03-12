@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Search App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/search-app.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js"></script>
+</head>
+
+<body ng-app="searchAppApp">
+
+    <div class="header">
+        <div class="my-header">
+            <div class="header-link">
+                <!--<span class="pull-left cursor-pointer header-home">Home</span>
+                <span class="pull-right cursor-pointer header-welcome">Welcome</span>-->
+                <a href="#!/home/">Home</a>
+                <a href="#!/post/" data-ng-if="currentPath !== 'login'">Posts</a>
+                <!--<span class="pull-right" data-ng-if="currentPath === 'home'">, {{}}</span>-->
+                <span class="pull-right">Welcome</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-content ">
+        <div ng-view></div>
+    </div>
+
+    <div class="footer ">
+        <div class="my-header ">
+            <div class="header-link ">
+                <span class="pull-left ">© Posts Inc</span>
+                <span class="pull-right "> 2017</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/app.js "></script>
+    <script src="scripts/services/login-srv.js "></script>
+    <script src="scripts/controllers/login.ctrl.js "></script>
+    <script src="scripts/controllers/home.ctrl.js "></script>
+    <script src="scripts/controllers/post.ctrl.js "></script>
+    <script src="data/SampleJsonData.json"></script>
+</body>
+
+</html>

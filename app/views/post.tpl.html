@@ -1,0 +1,15 @@
+<div class="post-outer-container col-lg-12 col-md-12 col-sm-12">
+    <div class="login-title text-center">Search My Posts</div>
+    <form class="form-inline text-center">
+        <input type="text" class="form-control input-lg" placeholder="Search Text" data-ng-model="post.searchpost">
+        <button class="btn btn-default btn-lg">Search</button>
+    </form>
+    <div style="padding: 20px;">
+        <div class="col-lg-6 col-md-6 col-sm-12" style="padding-bottom: 10px;" data-ng-repeat="val in post.myContent | filter: post.searchpost">
+            <div class="post-my-card">
+                <div class="text-center">User Id : {{val.userId}}</div>
+                <div>Title : {{val.title}}</div>
+            </div>
+        </div>
+    </div>
+</div>
